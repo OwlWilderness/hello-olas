@@ -56,3 +56,9 @@ class ResetPayload(BaseTxPayload):
     """Represent a transaction payload of type 'reset'."""
 
     period_count: int
+
+@dataclass(frozen=True)
+class PrintCountPayload(BaseTxPayload):
+    """Represent a transaction payload of type 'print_count'."""
+
+    print_count: int

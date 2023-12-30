@@ -39,6 +39,7 @@ from packages.valory.skills.hello_world_abci.rounds import (
     CollectRandomnessRound,
     HelloWorldAbciApp,
     PrintMessageRound,
+    PrintCountRound,
     RegistrationRound,
     ResetAndPauseRound,
     SelectKeeperRound,
@@ -205,6 +206,39 @@ class PrintMessageBehaviour(HelloWorldABCIBaseBehaviour, ABC):
 
         self.set_done()
 
+class PrintCountBehaviour(HelloWorldABCIBaseBehaviour, ABC):
+    """Prints the count."""
+
+    matching_round = PrintCountRound
+
+    def async_act(self) -> Generator:
+        """
+        Do the action.
+
+        Steps:
+        - Get the Print Count in Syncronized Data
+        - update the value by one
+        - Print the count to the local console.
+        - Send the transaction with the printed count and wait for it to be mined.
+        - Wait until ABCI application transitions to the next round.
+        - Go to the next behaviour (set done event).
+        """
+
+        print_count = self.synchronized_data.print_count + 1
+        self.synchronized_data.print_count = print_count
+        message = f"This message has been printed {print_cout} times."
+
+        printed_message = f"Agent {self.context.agent_name} (address {self.context.agent_address}, owner {self.params.owner_address}) in period {self.synchronized_data.period_count} says: {message}."
+
+        print(printed_message)
+        self.context.logger.info(f"printed_message={printed_message}")
+
+        payload = PrintCountPayload(self.context.agent_address, printed_message)
+
+        yield from self.send_a2a_transaction(payload)
+        yield from self.wait_until_round_end()
+
+        self.set_done()
 
 class ResetAndPauseBehaviour(HelloWorldABCIBaseBehaviour):
     """Reset behaviour."""
