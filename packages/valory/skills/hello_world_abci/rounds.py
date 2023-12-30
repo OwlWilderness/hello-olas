@@ -71,11 +71,11 @@ class SynchronizedData(
         )
     
     @property
-    def print_count(self) -> int:
+    def print_count(self) -> List[int]:
         """Get the print count."""
 
         return cast(
-            int,
+            List[int],
             self.db.get_strict("print_count"),
         )
 
@@ -182,8 +182,7 @@ class PrintCountRound(CollectSameUntilThresholdRound, HelloWorldABCIAbstractRoun
                     [
                         cast(PrintCountPayload, payload).print_count
                         for payload in self.collection.values()
-                    ]
-                ),
+                    ],
                 synchronized_data_class=SynchronizedData,
             )
             return synchronized_data, Event.DONE

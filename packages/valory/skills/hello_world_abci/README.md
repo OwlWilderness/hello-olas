@@ -23,6 +23,10 @@ application for a simple demonstration.
 
    Prints the celebrated 'HELLO WORLD!' message.
 
+* `PrintCountBehaviour`
+
+   Prints the celebrated count.
+
 * `ResetAndPauseBehaviour`
 
    Reset state.
