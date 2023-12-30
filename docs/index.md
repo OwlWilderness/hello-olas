@@ -330,7 +330,7 @@ Note that the easiest way to start building a new {{fsm_app}} is by [using the {
                     self.context.agent_address
                     == self.synchronized_data.most_voted_keeper_address
                 ):
-                    message = self.params.hello_world_string
+                    message = f"{self.params.hello_world_string}. The Owner Address is {self.params.owner_address}."
                 else:
                     message = ":|"
 
