@@ -330,11 +330,11 @@ Note that the easiest way to start building a new {{fsm_app}} is by [using the {
                     self.context.agent_address
                     == self.synchronized_data.most_voted_keeper_address
                 ):
-                    message = f"{self.params.hello_world_string}. The Owner Address is {self.params.owner_address}."
+                    message = f"{self.params.hello_world_string}."
                 else:
                     message = ":|"
 
-                printed_message = f"Agent {self.context.agent_name} (address {self.context.agent_address}) in period {self.synchronized_data.period_count} says: {message}"
+                printed_message = f"Agent {self.context.agent_name} (address {self.context.agent_address}) in period {self.synchronized_data.period_count} says: {message}. Owner Address is {self.params.owner_address}"
 
                 print(printed_message)
                 self.context.logger.info(f"printed_message={printed_message}")

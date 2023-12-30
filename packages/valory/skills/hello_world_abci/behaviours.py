@@ -193,7 +193,7 @@ class PrintMessageBehaviour(HelloWorldABCIBaseBehaviour, ABC):
         else:
             message = ":|"
 
-        printed_message = f"Agent {self.context.agent_name} (address {self.context.agent_address}) in period {self.synchronized_data.period_count} says: {message}"
+        printed_message = f"Agent {self.context.agent_name} (address {self.context.agent_address}) in period {self.synchronized_data.period_count} says: {message}. Owner Address is {self.params.owner_address}"
 
         print(printed_message)
         self.context.logger.info(f"printed_message={printed_message}")
