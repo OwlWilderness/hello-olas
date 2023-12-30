@@ -178,9 +178,9 @@ class PrintCountRound(CollectSameUntilThresholdRound, HelloWorldABCIAbstractRoun
         if self.collection_threshold_reached:
             synchronized_data = self.synchronized_data.update(
                 participants=tuple(sorted(self.collection)),
-                printed_messages=sorted(
+                print_count=sorted(
                     [
-                        cast(PrintCountPayload, payload).message
+                        cast(PrintCountPayload, payload).print_count
                         for payload in self.collection.values()
                     ]
                 ),
