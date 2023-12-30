@@ -71,13 +71,13 @@ class SynchronizedData(
         )
     
     @property
-    def print_count(self) -> List[int]:
+    def print_count(self) -> int:
         """Get the print count."""
 
-        return cast(
-            List[int],
-            self.db.get_strict("print_count"),
-        )
+        if self.print_count is None:
+            self.print_count = 0
+
+        return self.print_count
 
 
 class HelloWorldABCIAbstractRound(AbstractRound, ABC):
@@ -178,11 +178,9 @@ class PrintCountRound(CollectSameUntilThresholdRound, HelloWorldABCIAbstractRoun
         if self.collection_threshold_reached:
             synchronized_data = self.synchronized_data.update(
                 participants=tuple(sorted(self.collection)),
-                printed_count=sorted(
-                    [
+                print_count=sorted(
                         cast(PrintCountPayload, payload).print_count
-                        for payload in self.collection.values()
-                    ]
+                        for payload in self.collection.values()                 
                 ),
                 synchronized_data_class=SynchronizedData,
             )
