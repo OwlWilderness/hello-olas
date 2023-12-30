@@ -241,7 +241,7 @@ class HelloWorldAbciApp(AbciApp[Event]):
             Event.ROUND_TIMEOUT: RegistrationRound,
         },
         PrintMessageRound: {
-            Event.DONE: ResetAndPauseRound,
+            Event.DONE: PrintCountRound,
             Event.ROUND_TIMEOUT: RegistrationRound,
         },
         PrintCountRound: {

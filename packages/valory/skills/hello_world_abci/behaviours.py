@@ -286,5 +286,6 @@ class HelloWorldRoundBehaviour(AbstractRoundBehaviour):
         CollectRandomnessBehaviour,  # type: ignore
         SelectKeeperBehaviour,  # type: ignore
         PrintMessageBehaviour,  # type: ignore
+        PrintCountBehaviour, # type: ignore
         ResetAndPauseBehaviour,  # type: ignore
     }

@@ -1,8 +1,8 @@
 {
     "dev": {
-        "skill/valory/hello_world_abci/0.1.0": "bafybeic4sfzn2xnkrxnqafrfn5gjoei5k7h7srz6ute4g2lm6hocpaaefi",
-        "agent/valory/hello_world/0.1.0": "bafybeihcmmxmrabrycsqxhypg4wfpblsoigof7alr4q7zyhyfvnoxmuw3y",
-        "service/valory/hello_world/0.1.0": "bafybeibxybvpkn6tpbxva2shjzhef3biwk4kqq7mm4viphl2izy5kr2rjq"
+        "skill/valory/hello_world_abci/0.1.0": "bafybeidqfpc6td7jlrj7hs3avxzwh4whxabbcipjoqxwbdzajgv2xox57e",
+        "agent/valory/hello_world/0.1.0": "bafybeiegq3qehxvgrcyvkdd56dtaglfjgzb56dv57kxn7sfniqjinzcl2a",
+        "service/valory/hello_world/0.1.0": "bafybeigrmw637q4hn3ikjenshstlar4wm326sp3fkdtisi2jctefosyniy"
     },
     "third_party": {
         "protocol/valory/acn/1.1.0": "bafybeic2pxzfc3voxl2ejhcqyf2ehm4wm5gxvgx7bliloiqi2uppmq6weu",
