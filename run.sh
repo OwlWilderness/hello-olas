@@ -1,7 +1,10 @@
-apt install pipenv
-make new_env && pipenv shell
+#apt install pipenv
+#make new_env && pipenv shell
+rm -rf hello_world_service
 autonomy init --reset --author valory --remote --ipfs --ipfs-node "/dns/registry.autonolas.tech/tcp/443/https"
 autonomy packages sync --update-packages
+autonomy packages lock
+autonomy push-all
 autonomy fetch valory/hello_world:0.1.0 --local --service --alias hello_world_service; cd hello_world_service
 autonomy build-image
 touch keys.json

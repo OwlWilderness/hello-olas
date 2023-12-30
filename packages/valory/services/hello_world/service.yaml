@@ -7,7 +7,7 @@ license: Apache-2.0
 fingerprint:
   README.md: bafybeiapubcoersqnsnh3acia5hd7otzt7kjxekr6gkbrlumv6tkajl6jm
 fingerprint_ignore_patterns: []
-agent: valory/hello_world:0.1.0:bafybeib5grnum25svkpozqqnvpd7nmwoaypnc3l7lbnoj335nwgczsiyca
+agent: valory/hello_world:0.1.0:bafybeigdvknm2h4e3lgqpvfozdmrlfgkgs6r62tq7hemeup675ilhstqga
 number_of_agents: 4
 deployment: {}
 ---
@@ -17,7 +17,7 @@ extra:
       log_dir: ${LOG_DIR:str:/benchmarks}
   params_args:
     args:
-      owner_address: ${OWNER_ADDRESS:str:0x0000000000000000000000000000000000000000}     
+      owner_address: ${OWNER_ADDRESS:str:0x0000000000000000000000000000000000000000}
       setup: &id001
         all_participants: ${ALL_PARTICIPANTS:list:["0x0000000000000000000000000000000000000000"]}
         safe_contract_address: ${SAFE_CONTRACT_ADDRESS:str:0x0000000000000000000000000000000000000000}
