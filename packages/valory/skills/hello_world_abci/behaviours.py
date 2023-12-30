@@ -226,15 +226,15 @@ class PrintCountBehaviour(HelloWorldABCIBaseBehaviour, ABC):
         """
 
         print_count = self.synchronized_data.print_count + 1
-        self.synchronized_data.print_count = print_count
-        message = f"This message has been printed {print_cout} times."
+        #self.synchronized_data.print_count = print_count
+        message = f"This message has been printed {print_count} times."
 
-        printed_message = f"Agent {self.context.agent_name} (address {self.context.agent_address}, owner {self.params.owner_address}) in period {self.synchronized_data.period_count} says: {message}."
+        print_count_msg = f"Agent {self.context.agent_name} (address {self.context.agent_address}, owner {self.params.owner_address}) in period {self.synchronized_data.period_count} says: {message}."
 
-        print(printed_message)
-        self.context.logger.info(f"printed_message={printed_message}")
+        print(print_count_msg)
+        self.context.logger.info(f"print_count_msg={print_count_msg}")
 
-        payload = PrintCountPayload(self.context.agent_address, printed_message)
+        payload = PrintCountPayload(self.context.agent_address, print_count)
 
         yield from self.send_a2a_transaction(payload)
         yield from self.wait_until_round_end()
