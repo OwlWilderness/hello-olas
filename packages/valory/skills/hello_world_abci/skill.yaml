@@ -6,7 +6,7 @@ description: Hello World ABCI application.
 license: Apache-2.0
 aea_version: '>=1.0.0, <2.0.0'
 fingerprint:
-  README.md: bafybeidrjtykhovnccj3sovugdn4r3tszuzv7h37vta6o35epi5qfzdpke
+  README.md: bafybeihfhm5af2qnm4bqoxdbvcgsytuxazl7t34twvwfdzzgoe7e5jp5cy
   __init__.py: bafybeibiblks3d3s3ditug4hfzl3ob3cibokcz4ofs7cbbsbqw5zzbtd3m
   behaviours.py: bafybeifd7nyfcwyhpmnyq5zla4j5cbxr5xefumr3tuvqt4shg2xhthnhki
   dialogues.py: bafybeigabhaykiyzbluu4mk6bbrmqhzld2kyp32pg24bvjmzrrb74einwm
@@ -14,7 +14,7 @@ fingerprint:
   handlers.py: bafybeieyq37quymqq6md3hi5bvynifnkx73bcvmzct6difyvdkbzj6abaq
   models.py: bafybeidym2ekwwlki2uyedtiw7ljzsobcwagcfimkhof7jlquwgtklftni
   payloads.py: bafybeicrjcolcuhwca7scjn3ntoavywptto3y6ulskxrcr46bzv73bvskq
-  rounds.py: bafybeibnw44x7lcqusmpqamxujr2bqh6lpwsasl6advx5fmrqmellsrfwu
+  rounds.py: bafybeiex5qdoqtrohwpfmsr2nhhlrr2omrfudpx42ce634e7nvgrtzliiq
   tests/__init__.py: bafybeibpuwe63mjjwnaanx7wdw63reh6qa5xdtjxdf75o3nksvjercte4y
   tests/test_behaviours.py: bafybeie6b5ibatxs4dlunkzj3b6k7al4ifgqyynh2qvbjekkbbnhlum4iy
   tests/test_dialogues.py: bafybeiarl4wsnljaxkgxdwr47xd4xjjjtkfgqbtazt2v2oem47alhaykj4

@@ -178,11 +178,12 @@ class PrintCountRound(CollectSameUntilThresholdRound, HelloWorldABCIAbstractRoun
         if self.collection_threshold_reached:
             synchronized_data = self.synchronized_data.update(
                 participants=tuple(sorted(self.collection)),
-                print_count=sorted(
+                printed_count=sorted(
                     [
                         cast(PrintCountPayload, payload).print_count
                         for payload in self.collection.values()
-                    ],
+                    ]
+                ),
                 synchronized_data_class=SynchronizedData,
             )
             return synchronized_data, Event.DONE
