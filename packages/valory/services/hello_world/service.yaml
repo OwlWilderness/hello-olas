@@ -30,8 +30,9 @@ type: skill
         service_registry_address: ${SERVICE_REGISTRY_ADDRESS:str:null}
         share_tm_config_on_startup: ${SHARE_TM_CONFIG_ON_STARTUP:bool:false}
         on_chain_service_id: ${ON_CHAIN_SERVICE_ID:int:null}
+        owner_address: ${OWNER_ADDRESS:str:0x0000000000000000000000000000000000000000}
         setup: *id001
-        hello_world_message: ${HELLO_WORLD_STRING_0:str:HELLO_WORLD! (from Agent 0)}
+        hello_world_message: ${HELLO_WORLD_STRING_0:str:HELLO_WORLD! (from Agent 0). The Owner is OWNER_ADDRESS}
     benchmark_tool:
       args: *id002
 1:
@@ -41,8 +42,9 @@ type: skill
         service_registry_address: ${SERVICE_REGISTRY_ADDRESS:str:null}
         share_tm_config_on_startup: ${SHARE_TM_CONFIG_ON_STARTUP:bool:false}
         on_chain_service_id: ${ON_CHAIN_SERVICE_ID:int:null}
+        owner_address: ${OWNER_ADDRESS:str:0x0000000000000000000000000000000000000000}
         setup: *id001
-        hello_world_message: ${HELLO_WORLD_STRING_1:str:HELLO_WORLD! (from Agent 1)}
+        hello_world_message: ${HELLO_WORLD_STRING_1:str:HELLO_WORLD! (from Agent 1). The Owner is OWNER_ADDRESS}
     benchmark_tool:
       args: *id002
 2:
@@ -52,8 +54,9 @@ type: skill
         service_registry_address: ${SERVICE_REGISTRY_ADDRESS:str:null}
         share_tm_config_on_startup: ${SHARE_TM_CONFIG_ON_STARTUP:bool:false}
         on_chain_service_id: ${ON_CHAIN_SERVICE_ID:int:null}
+        owner_address: ${OWNER_ADDRESS:str:0x0000000000000000000000000000000000000000}
         setup: *id001
-        hello_world_message: ${HELLO_WORLD_STRING_2:str:HELLO_WORLD! (from Agent 2)}
+        hello_world_message: ${HELLO_WORLD_STRING_2:str:HELLO_WORLD! (from Agent 2). The Owner is OWNER_ADDRESS}
     benchmark_tool:
       args: *id002
 3:
@@ -63,8 +66,9 @@ type: skill
         service_registry_address: ${SERVICE_REGISTRY_ADDRESS:str:null}
         share_tm_config_on_startup: ${SHARE_TM_CONFIG_ON_STARTUP:bool:false}
         on_chain_service_id: ${ON_CHAIN_SERVICE_ID:int:null}
+        owner_address: ${OWNER_ADDRESS:str:0x0000000000000000000000000000000000000000}
         setup: *id001
-        hello_world_message: ${HELLO_WORLD_STRING_3:str:HELLO_WORLD! (from Agent 3)}
+        hello_world_message: ${HELLO_WORLD_STRING_3:str:HELLO_WORLD! (from Agent 3). The Owner is OWNER_ADDRESS}
     benchmark_tool:
       args: *id002
 ---
