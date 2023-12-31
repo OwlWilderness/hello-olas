@@ -172,8 +172,7 @@ class PrintCountRound(CollectSameUntilThresholdRound, HelloWorldABCIAbstractRoun
         """Process the end of the block."""
         if self.threshold_reached:
             synchronized_data = self.synchronized_data.update(
-                print_count = cast(PrintCountPayload, payload).print_count
-                        for payload in self.collection.values()
+                print_count = cast(PrintCountPayload,self.collection.value()).print_count,
             )
             return synchronized_data, Event.DONE
         return None
