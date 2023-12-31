@@ -171,9 +171,10 @@ class ResetAndPauseRound(CollectSameUntilThresholdRound, HelloWorldABCIAbstractR
 class PrintCountRound(CollectSameUntilThresholdRound, HelloWorldABCIAbstractRound):
     """A round in which the keeper prints the print count"""
     payload_class = PrintCountPayload
-    synchronized_data_class = SynchronizedData
-    done_event = Event.DONE
-    no_majority_event = Event.NO_MAJORITY
+        if self.collection_threshold_reached:
+            synchronized_data = self.synchronized_data
+            return synchronized_data, Event.DONE
+        return None
 
 class HelloWorldAbciApp(AbciApp[Event]):
     """HelloWorldAbciApp
