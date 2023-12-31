@@ -74,10 +74,7 @@ class SynchronizedData(
     def print_count(self) -> int:
         """Get the print count."""
 
-        if self.print_count is None:
-            self.print_count = 0
-
-        return self.print_count
+        return self.db.get("print_count",0)
 
 
 class HelloWorldABCIAbstractRound(AbstractRound, ABC):

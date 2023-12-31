@@ -225,7 +225,7 @@ class PrintCountBehaviour(HelloWorldABCIBaseBehaviour, ABC):
         - Go to the next behaviour (set done event).
         """
       
-        #print_count = self.synchronized_data.print_count
+        print_count = self.synchronized_data.print_count
 
         #self.synchronized_data.print_count = print_count
         message = f"This message has been printed {print_count} times."
