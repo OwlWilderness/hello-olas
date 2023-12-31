@@ -170,22 +170,10 @@ class ResetAndPauseRound(CollectSameUntilThresholdRound, HelloWorldABCIAbstractR
 
 class PrintCountRound(CollectSameUntilThresholdRound, HelloWorldABCIAbstractRound):
     """A round in which the keeper prints the print count"""
-
     payload_class = PrintCountPayload
-
-    def end_block(self) -> Optional[Tuple[BaseSynchronizedData, Event]]:
-        """Process the end of the block."""
-        if self.collection_threshold_reached:
-            synchronized_data = self.synchronized_data.update(
-                participants=tuple(sorted(self.collection)),
-                print_count=sorted(
-                        cast(PrintCountPayload, payload).print_count
-                        for payload in self.collection.values()                 
-                ),
-                synchronized_data_class=SynchronizedData,
-            )
-            return synchronized_data, Event.DONE
-        return None
+    synchronized_data_class = SynchronizedData
+    done_event = Event.DONE
+    no_majority_event = Event.NO_MAJORITY
 
 class HelloWorldAbciApp(AbciApp[Event]):
     """HelloWorldAbciApp
